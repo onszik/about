@@ -1,0 +1,121 @@
+﻿html {
+    height: 100%;
+    margin: 0;
+
+    padding: 20px;
+    color: white;
+}
+body {
+    height: 100%;
+    margin: 0;
+
+    background: black;
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgbargb(20, 17, 19) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(20, 17, 19) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(20, 17, 19) 100%);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-family: 'Cascadia Code';
+    font-size: 50px;
+    cursor: default;
+
+    margin: 0px;
+}
+
+.subtitle {
+    font-family: 'Cascadia Code';
+    font-size: 30px;
+    font-weight: bolder;
+    padding-left: 10px;
+    cursor: default;
+}
+
+.collapsible {
+    font-family: 'Cascadia Code';
+    padding-left: 10px;
+
+    cursor: pointer;
+
+    color: lightgray;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+}
+
+.arrow {
+    max-height: 15px;
+    padding-right: 5px;
+
+    transition: 0.2s ease-out;
+}
+
+.active, .collapsible:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.return {
+    font-family: 'Cascadia Code';
+    font-size: 20px;
+    color: crimson;
+}
+
+a:link {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.2s ease-out 20ms;
+}
+
+a:visited {
+    color: crimson;
+}
+
+a:hover {
+    color: deeppink;
+    padding-left: 10px;
+}
+
+
+.bounce {
+    display: inline-flex;
+
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% {
+        padding-left: 0px;
+        background-color: none;
+    }
+
+    50% {
+        padding-left: 10px;
+        background-color: crimson;
+    }
+
+    100% {
+        padding-left: 0px;
+        background-color: none;
+    }
+}
+
+button {
+    background-color: none;
+    border-color: none;
+}

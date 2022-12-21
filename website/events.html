@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EVENTS</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="icon.png" rel="icon" />
+</head>
+<body>
+
+    <a href="index.html" class="return">< go back</a>
+    <h1 class="title">> <div class="bounce">events i've attended</div></h1>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Game Jam Plus 2021/22</h2>
+        <div class="content">
+            <p><a href="https://onszik.itch.io/goblin-mode">Itch</a></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />MAGDA 1UP Hyper-Jam</h2>
+        <div class="content">
+            <p><a href="https://onszik.itch.io/ars">Itch</a></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Game Jam Plus 2022/23</h2>
+        <div class="content">
+            <p><a href="#">Itch</a></p>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    this.firstChild.style.transform = "scaleY(1)";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    this.firstChild.style.transform = "scaleY(-1)";
+                }
+            });
+        }
+
+        coll[0].classList.toggle("active");
+        var firstContent = coll[0].nextElementSibling;
+        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+        this.firstChild.style.transform = "scaleY(-1)";
+    </script>
+</body>
+</html>

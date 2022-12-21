@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>GAMES</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="icon.png" rel="icon" />
+</head>
+<body>
+    <a href="index.html" class="return">< go back</a>
+    <h1 class="title">> <div class="bounce">my games</div></h1>
+
+    <h2 class="subtitle">"selected works"</h2>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Paint The Thing</h2>
+        <div class="content">
+            <p><a href="https://play.google.com/store/apps/details?id=com.TheSideGames.paintthething&hl=en&gl=US">Play Store</a></p>
+            <p><a href="https://cringe-master-64.itch.io/paint-the-thing">Itch</a></p>
+
+            <p><i>Paint The Thing is a casual mobile game where you paint shapes while avoiding deadly obstacles on the screen</i></p>
+            <p>This game was made in 48 hours with Cringe Master 64 for <u>Game Jam Plus 2021/22</u>, in which we achieved the title <u>Best Game Europe</u></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Goblin Mode</h2>
+        <div class="content">
+            <p><a href="https://onszik.itch.io/goblin-mode">Itch</a></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Abbey Road Simulator</h2>
+        <div class="content">
+            <p><a href="https://onszik.itch.io/ars">Itch</a></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="collapsible"><img src="arrow.png" class="arrow" />Misinformation Game</h2>
+        <div class="content">
+            <p><a href="#">Itch</a></p>
+        </div>
+    </div>
+
+    <!--<p>Goblin Mode</p>-->
+    <!--<p>Abbey Road Simulator</p>-->
+    <!--<p>Misinformation Game</p>-->
+
+    <h2 class="subtitle">more??</h2>
+    <p><a href="https://onszik.itch.io/">> my itch.io</a></p>
+    <p><a href="https://onszik.newgrounds.com/">> my newgrounds</a></p>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    this.firstChild.style.transform = "scaleY(1)";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    this.firstChild.style.transform = "scaleY(-1)";
+                }
+            });
+        }
+
+        coll[0].classList.toggle("active");
+        var firstContent = coll[0].nextElementSibling;
+        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+        this.firstChild.style.transform = "scaleY(-1)";
+    </script>
+</body>
+</html>
